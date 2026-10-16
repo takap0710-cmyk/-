@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>金沢・北陸 2泊3日 共有用候補</title>
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1f2937; --sub:#667085;
+  --line:#e6e1d8; --accent:#8a4b2a; --accent2:#245b4b;
+  --gold:#a57421; --soft:#fbf8f2; --blue:#315a7d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.65}
+.wrap{max-width:760px;margin:auto;padding:18px 14px 60px}
+.hero{background:linear-gradient(145deg,#fff 0%,#f4eee4 100%);border:1px solid var(--line);
+  border-radius:22px;padding:22px 18px;box-shadow:0 8px 28px rgba(67,51,35,.06)}
+h1{font-size:25px;line-height:1.25;margin:0 0 8px}
+h2{font-size:20px;margin:28px 2px 12px}
+h3{font-size:17px;margin:0 0 7px}
+.muted{color:var(--sub)}
+.date{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:14px}
+.tag{display:inline-block;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:700;margin:2px 4px 2px 0}
+.good{background:#e6f3ee;color:#175d49}
+.warn{background:#fff1da;color:#8b5700}
+.info{background:#eaf1f7;color:#2d587a}
+.cards{display:grid;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 5px 18px rgba(60,48,34,.04)}
+.card.reco{border:2px solid #7c9f8f;position:relative}
+.ribbon{position:absolute;top:-10px;right:12px;background:var(--accent2);color:white;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800}
+.score{display:flex;gap:4px;margin:8px 0 2px}
+.dot{width:9px;height:9px;border-radius:50%;background:#d8d4cc}
+.dot.on{background:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.metric{background:var(--soft);border-radius:12px;padding:9px 10px;font-size:13px}
+.metric b{display:block;font-size:14px}
+.timeline{border-left:3px solid #d7c9ba;margin:8px 0 0 8px;padding-left:14px}
+.item{position:relative;margin:0 0 13px}
+.item:before{content:"";position:absolute;left:-20px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.time{font-weight:800;color:var(--accent);font-size:13px}
+.compare{width:100%;border-collapse:separate;border-spacing:0;background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;font-size:13px}
+.compare th,.compare td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.compare tr:last-child td{border-bottom:none}
+.compare th{text-align:left;background:#f4f0e9;font-size:12px}
+.callout{border-left:4px solid var(--gold);background:#fffaf0;padding:12px 13px;border-radius:0 13px 13px 0;margin:12px 0}
+.food{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+.emoji{font-size:24px;line-height:1}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{padding:12px 14px;font-weight:800;cursor:pointer}
+details>div{padding:0 14px 14px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
+button{appearance:none;border:0;border-radius:13px;padding:12px;font-weight:800;font-size:14px;cursor:pointer}
+.primary{background:var(--accent2);color:#fff}
+.secondary{background:#ece8e0;color:#3d4652}
+.vote{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.vote button{background:#f1eee8;color:#404753}
+.vote button.active{background:var(--accent);color:white}
+.small{font-size:12px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.sticky{position:sticky;bottom:10px;z-index:5;margin-top:18px}
+.stickybox{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+@media(max-width:460px){
+  .grid2{grid-template-columns:1fr 1fr}
+  h1{font-size:22px}
+  .wrap{padding-left:10px;padding-right:10px}
+  .card{padding:14px}
+  .compare{font-size:12px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <span class="date">2026/12/4(金) 夜 → 12/6(日) 夜</span>
+  <h1>金沢・北陸 2泊3日<br>ふたりで決める候補まとめ</h1>
+  <p class="muted">金曜は安く前泊。土曜は金沢を凝縮して観光。土曜夜は<strong>食事のいい宿</strong>、日曜はレンタカーで郊外へ、という前提。</p>
+  <div>
+    <span class="tag good">食事重視</span>
+    <span class="tag good">土曜宿 約2万円/人</span>
+    <span class="tag info">兼六園は雪吊り</span>
+    <span class="tag warn">12月なので冬タイヤ前提</span>
+  </div>
+</section>
+
+<h2>まず結論：いまの最有力</h2>
+<section class="card reco">
+  <div class="ribbon">いま一番おすすめ</div>
+  <h3>🌊 A. 能登・千里浜コース</h3>
+  <p><strong>金沢観光 + 温泉 + 海鮮 + 砂浜ドライブ</strong>が一度に成立。さらに12/5(土)の宿が予算にかなりきれいにハマる。</p>
+  <div class="grid2">
+    <div class="metric"><b>観光</b>★★★★☆</div>
+    <div class="metric"><b>食事</b>★★★★★</div>
+    <div class="metric"><b>温泉</b>★★★★☆</div>
+    <div class="metric"><b>予算適合</b>★★★★★</div>
+  </div>
+  <div class="callout"><b>宿の本命：</b>休暇村 能登千里浜<br>
+  12/5・2名1室「能登の里海会席」夕朝食付きが、現在の公式予約表示で<strong>1人 20,700円</strong>。源泉かけ流し温泉あり。</div>
+</section>
+
+<h2>3つの候補を比較</h2>
+<div class="cards">
+
+<section class="card">
+  <h3>🌊 A. 能登・千里浜</h3>
+  <p>「石川に来た感」が強い。海沿いドライブと冬の魚介が主役。</p>
+  <span class="tag good">香箱ガニ時期</span>
+  <span class="tag good">宿が予算内</span>
+  <span class="tag warn">千里浜は荒天時通行止めあり</span>
+  <div class="score">
+    <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span>
+  </div>
+  <p class="small muted">日曜例：千里浜 → 氣多大社 → 巌門あたりまで。七尾・和倉方面に振る案もあり。</p>
+</section>
+
+<section class="card">
+  <h3>♨️ B. 加賀温泉・橋立港</h3>
+  <p><strong>温泉と食事を一番重視するならこれ。</strong>山代・山中温泉に泊まり、日曜は橋立漁港で冬の海鮮。</p>
+  <span class="tag good">蟹・海鮮が強い</span>
+  <span class="tag good">温泉旅館らしさ◎</span>
+  <span class="tag info">九谷焼も組める</span>
+  <div class="score">
+    <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span>
+  </div>
+  <p class="small muted">候補宿：山代温泉「多々見」は料理重視・蟹料理プランあり。「吉祥やまなか」は12/5の最安表示が約24,390円/人で少し予算超過気味。</p>
+</section>
+
+<section class="card">
+  <h3>🏘️ C. 白川郷</h3>
+  <p>観光地そのもののインパクトは一番。合掌造りの集落を歩く。</p>
+  <span class="tag good">世界遺産</span>
+  <span class="tag warn">12月初旬は初雪の時期</span>
+  <span class="tag warn">スタッドレス必須</span>
+  <div class="score">
+    <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span>
+  </div>
+  <p class="small muted">金沢↔白川郷は高速バスでも片道約1時間15分。雪道運転を避けたいなら、日曜だけバスにするのもかなり合理的。</p>
+</section>
+</div>
+
+<h2>土曜：金沢はこれくらいに絞る</h2>
+<section class="card">
+  <div class="timeline">
+    <div class="item">
+      <div class="time">8:00〜</div>
+      <b>兼六園</b><br>
+      <span class="small muted">12月は8:00開園。11/1〜12月中旬は雪吊り作業中で、冬の金沢らしい景色。</span>
+    </div>
+    <div class="item">
+      <div class="time">9:30ごろ</div>
+      <b>金沢城公園</b><br>
+      <span class="small muted">兼六園からそのまま移動。別枠にせずセットで。</span>
+    </div>
+    <div class="item">
+      <div class="time">11:00〜</div>
+      <b>金箔貼り体験（石川県観光物産館）</b><br>
+      <span class="small muted">兼六園すぐ横。40〜60分、1,600〜2,250円程度。受付順。</span>
+    </div>
+    <div class="item">
+      <div class="time">12:30ごろ</div>
+      <b>近江町市場で軽めの海鮮ランチ</b><br>
+      <span class="small muted">夜が旅館会席なので、昼に食べ過ぎない。</span>
+    </div>
+    <div class="item">
+      <div class="time">14:00〜</div>
+      <b>ひがし茶屋街</b><br>
+      <span class="small muted">金沢らしい街歩き枠。抹茶・和菓子休憩もここ。</span>
+    </div>
+    <div class="item">
+      <div class="time">15:30〜16:00</div>
+      <b>金沢駅へ → レンタカー</b><br>
+      <span class="small muted">A能登 / B加賀ならここで借りて宿へ。C白川郷なら日曜朝レンタルか高速バスでOK。</span>
+    </div>
+  </div>
+  <p class="small muted">今回は 21世紀美術館・長町武家屋敷・国立工芸館は「時間が余ったら」に回す。詰め込みすぎない。</p>
+</section>
+
+<h2>土曜の宿候補</h2>
+
+<section class="card">
+  <h3>① 休暇村 能登千里浜 ⭐本命</h3>
+  <p><strong>12/5(土)・2名1室・夕朝食付き 20,700円/人</strong>の公式予約表示を確認。</p>
+  <div class="grid2">
+    <div class="metric"><b>夕食</b>能登の里海会席</div>
+    <div class="metric"><b>朝食</b>和洋ビュッフェ</div>
+    <div class="metric"><b>風呂</b>源泉かけ流し</div>
+    <div class="metric"><b>日曜</b>千里浜へすぐ</div>
+  </div>
+  <p class="small">さらに「のと路＋焼き蟹＋蟹天ぷら」は11/8〜2/19に一般21,000〜23,000円/人の設定あり。12/5の空室・料金は予約時に再確認。</p>
+</section>
+
+<section class="card">
+  <h3>② 山代温泉 彩華の宿 多々見</h3>
+  <p><strong>料理に寄せる加賀案。</strong>日本海の舟盛、活鮑、冬はずわい蟹・のどぐろ・寒ブリなどを使う会席プランを出している。</p>
+  <p class="small muted">夕朝食付きプランは通常日で16,500〜21,835円/人程度の掲載例あり。12/5土曜の「食事付き」料金は要確認。</p>
+</section>
+
+<section class="card">
+  <h3>③ 吉祥やまなか</h3>
+  <p>宿の雰囲気・温泉街・食事を一段上げる案。山中温泉で、加賀の美食をうたう夕朝食付きプランあり。</p>
+  <p class="small muted">12/5の最安価格表示は2名で48,780円（約24,390円/人）。希望の食事プラン次第でさらに上がるため、予算2万円前後なら「少し奮発」枠。</p>
+</section>
+
+<h2>12月なら食べたいもの</h2>
+<section class="card">
+  <div class="food">
+    <div class="emoji">🦀</div>
+    <div><b>香箱ガニ</b><br><span class="small muted">石川でいうメスのズワイガニ。内子・外子・蟹味噌が魅力。漁期は11/6〜12/29なので、12/5はまさにシーズン。</span></div>
+  </div>
+  <div class="food">
+    <div class="emoji">🐟</div>
+    <div><b>のどぐろ</b><br><span class="small muted">北陸で食べたい高級魚。塩焼きが分かりやすく美味しい。</span></div>
+  </div>
+  <div class="food">
+    <div class="emoji">🍲</div>
+    <div><b>治部煮</b><br><span class="small muted">金沢の郷土料理。魚介ばかりになったときの「金沢らしさ」枠。</span></div>
+  </div>
+  <div class="callout"><b>予算2万円前後なら：</b><br>
+  「タグ付き蟹フルコース」より、<strong>通常の地魚会席 + 香箱ガニを追加</strong>の方が満足度と予算のバランスが良さそう。タグ付きズワイ蟹の本格会席は5万円/人前後まで跳ねる宿もある。</div>
+</section>
+
+<h2>日曜のイメージ</h2>
+
+<details open>
+<summary>🌊 A. 能登・千里浜コース</summary>
+<div>
+  <b>朝：</b>宿を出て千里浜なぎさドライブウェイ<br>
+  <b>午前：</b>氣多大社<br>
+  <b>昼〜午後：</b>巌門など能登西海岸へ（または七尾・和倉方面へ方向転換）<br>
+  <b>夕方：</b>金沢へ戻ってレンタカー返却 → 新幹線
+  <p class="small muted">千里浜は高波などで当日通行止めになることがあるため、そこだけ「通れたらラッキー」くらいで。能登西海岸を全部回ると約200km・10時間級なので、今回は2〜3スポットに絞る。</p>
+</div>
+</details>
+
+<details>
+<summary>♨️ B. 加賀温泉・橋立港コース</summary>
+<div>
+  <b>朝：</b>山中 / 山代温泉街を散歩・朝風呂<br>
+  <b>午前：</b>鶴仙渓 or 九谷焼窯跡展示館<br>
+  <b>昼：</b>橋立漁港周辺で蟹・海鮮<br>
+  <b>午後：</b>加佐ノ岬など → 金沢へ戻る
+  <p class="small muted">冬の加賀は「温泉 + 橋立のズワイガニ」が王道。観光地の派手さより、食と温泉の満足度を取りにいく案。</p>
+</div>
+</details>
+
+<details>
+<summary>🏘️ C. 白川郷コース</summary>
+<div>
+  <b>朝：</b>金沢から白川郷へ（バスなら約1時間15分）<br>
+  <b>午前〜昼：</b>合掌造り集落・展望台<br>
+  <b>午後：</b>金沢へ戻る
+  <p class="small muted">白川郷は近年12月初旬に初雪が観測される時期。車ならスタッドレスタイヤ必須。雪道が微妙なら高速バスに切り替えられるのが強い。</p>
+</div>
+</details>
+
+<h2>レンタカー方針</h2>
+<section class="card">
+  <p><strong>A能登 / B加賀：</strong>土曜15:30〜16:00ごろ金沢駅で借りて、日曜夕方返却。</p>
+  <p><strong>C白川郷：</strong>日曜朝だけ借りる、または高速バス。冬道が不安ならバス推奨。</p>
+  <div class="callout"><b>12月なので全案共通：</b>レンタカーは「スタッドレスタイヤ装着」を予約時に明示して確認。休暇村能登千里浜も冬季の積雪・凍結と冬タイヤを案内している。</div>
+</section>
+
+<h2>ふたりで決めるなら、この3問だけ</h2>
+<section class="card">
+  <p>① <b>海沿いドライブ + 海鮮</b>が一番楽しそう？ → <strong>A 能登・千里浜</strong></p>
+  <p>② <b>温泉旅館 + 蟹</b>を旅の主役にしたい？ → <strong>B 加賀</strong></p>
+  <p>③ <b>世界遺産の景色</b>を最優先したい？ → <strong>C 白川郷</strong></p>
+  <hr>
+  <div class="vote">
+    <button onclick="vote('A',this)">A 能登</button>
+    <button onclick="vote('B',this)">B 加賀</button>
+    <button onclick="vote('C',this)">C 白川郷</button>
+  </div>
+  <p id="voteText" class="small muted" style="margin-bottom:0">タップすると、この端末で候補をメモできます。</p>
+</section>
+
+<h2>参考にした主な公式情報</h2>
+<section class="card small">
+  <p><a href="https://kanazawa-kankou.jp/experience/gold/">石川県観光物産館｜金箔貼り体験</a></p>
+  <p><a href="https://www.hot-ishikawa.jp/event/detail_22457.html">石川県公式｜兼六園 雪吊り</a></p>
+  <p><a href="https://www.qkamura.or.jp/noto/">休暇村能登千里浜 公式</a></p>
+  <p><a href="https://www.hot-ishikawa.jp/burarinoto/spot/detail_5818.html">石川県公式｜千里浜なぎさドライブウェイ</a></p>
+  <p><a href="https://shirakawa-go.gr.jp/faq/4/">白川郷観光協会｜冬の降雪・スタッドレス</a></p>
+  <p><a href="https://www.hokutetsu.co.jp/highway-bus/shirakawa/">北陸鉄道｜金沢〜白川郷</a></p>
+  <p><a href="https://www.visitkaga.jp/discover-kaga/seasons/winter">加賀市観光公式｜冬の加賀・蟹</a></p>
+  <p class="muted">料金・空室は2026/10/16時点で確認した表示をもとに記載。予約時に再確認。</p>
+</section>
+
+<div class="sticky">
+  <div class="stickybox">
+    <div class="actions">
+      <button class="primary" onclick="copySummary()">共有用の短文をコピー</button>
+      <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">上に戻る</button>
+    </div>
+    <div id="copyMsg" class="small muted" style="text-align:center;margin-top:5px"></div>
+  </div>
+</div>
+
+</div>
+<script>
+function vote(v,el){
+  document.querySelectorAll('.vote button').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  localStorage.setItem('hokuriku_vote',v);
+  const m={A:'A 能登・千里浜：海鮮＋温泉＋ドライブ案',B:'B 加賀：温泉旅館＋蟹・海鮮案',C:'C 白川郷：世界遺産を最優先する案'};
+  document.getElementById('voteText').textContent='今の候補：'+m[v];
+}
+const sv=localStorage.getItem('hokuriku_vote');
+if(sv){
+  const buttons=[...document.querySelectorAll('.vote button')];
+  const idx={A:0,B:1,C:2}[sv];
+  if(buttons[idx]) vote(sv,buttons[idx]);
+}
+function copySummary(){
+const t=`12/4(金)夜〜12/6(日)夜 金沢・北陸旅行候補
+
+【共通】
+金曜：安い宿で前泊
+土曜：兼六園（雪吊り）→金沢城→金箔体験→近江町→ひがし茶屋街
+土曜夜：食事付き旅館、1人2万円前後
+日曜：郊外ドライブ
+
+【A 能登・千里浜】いま一番有力
+休暇村能登千里浜：12/5 夕朝食付き20,700円/人の表示あり
+温泉＋能登の海鮮＋千里浜ドライブ。香箱ガニ時期。
+
+【B 加賀】
+山代/山中温泉で温泉旅館＋橋立漁港の蟹・海鮮。
+食と温泉を一番重視するならこれ。
+
+【C 白川郷】
+世界遺産の合掌造り。観光のインパクト最大。
+12月初旬は初雪の時期なので、車ならスタッドレス必須。金沢から高速バス約1時間15分。
+
+食べたい：香箱ガニ、のどぐろ、治部煮。
+予算なら「地魚会席＋香箱ガニ追加」が良さそう。`;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(t).then(()=>document.getElementById('copyMsg').textContent='コピーしました');
+  }else{
+    const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();
+    document.getElementById('copyMsg').textContent='コピーしました';
+  }
+}
+</script>
+</body>
+</html>
